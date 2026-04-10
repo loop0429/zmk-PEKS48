@@ -38,15 +38,48 @@
 };
 
 / {
+    combos {
+        compatible = "zmk,combos";
+
+        f5 {
+            bindings = <&kp F7>;
+            key-positions = <1 13>;
+        };
+
+        f12 {
+            bindings = <&kp F12>;
+            key-positions = <25 13>;
+        };
+
+        range_screenshot {
+            bindings = <&kp LG(LS(KP_NUMBER_4))>;
+            key-positions = <2 14>;
+        };
+
+        range_record {
+            bindings = <&kp LG(LS(KP_NUMBER_5))>;
+            key-positions = <14 26>;
+        };
+    };
+
+    macros {
+        onepass: onepass {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LS(S) &kp Z &kp R &kp K &kp N9 &kp PRCNT &kp N2 &kp N2 &kp LS(F) &kp H &kp U &kp N1 &kp N8 &kp N3 &kp A &kp LS(S) &kp ENTER>;
+            label = "ONEPASS";
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
         default_layer {
             bindings = <
 &kp ESC     &kp Q      &kp W         &kp E         &kp R      &kp T        &kp Y      &kp U        &kp I      &kp O           &kp P           &kp BACKSPACE
-&kp TAB     &kp A      &kp S         &kp D         &kp F      &kp G        &kp H      &kp J        &kp K      &kp L           &kp COLON       &mt LA(LS(LC(INT5))) SEMI
+&kp TAB     &kp A      &kp S         &kp D         &kp F      &kp G        &kp H      &kp J        &kp K      &kp L           &kp MINUS       &mt LA(LS(LC(INT5))) SEMI
 &kp LSHIFT  &kp Z      &kp X         &kp C         &kp V      &kp B        &kp N      &kp M        &kp COMMA  &kp DOT         &kp UP_ARROW    &kp SLASH
-&kp LCTRL   &kp GRAVE  &kp LEFT_ALT  &kp LEFT_WIN  &kp LANG1  &kp SPACE    &kp LANG4  &lt 1 ENTER  &kp EQUAL  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW
+&kp LCTRL   &kp COLON  &kp LEFT_ALT  &kp LEFT_WIN  &kp LANG1  &kp SPACE    &kp ENTER  &lt 1 LANG4  &kp EQUAL  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW
             >;
         };
 
@@ -55,7 +88,7 @@
 &trans  &kp EXCL   &kp AT    &kp HASH  &kp DLLR       &kp LPAR    &kp RPAR  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_0  &kp C_VOL_UP
 &trans  &kp PRCNT  &kp AMPS  &kp PIPE  &kp BACKSLASH  &kp LBRC    &kp RBRC  &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp ASTRK     &kp C_VOLUME_DOWN
 &trans  &trans     &kp SQT   &kp DQT   &kp GRAVE      &kp LBKT    &kp RBRC  &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &trans        &kp K_MUTE
-&trans  &trans     &trans    &trans    &trans         &trans      &trans    &trans        &trans        &trans        &trans        &trans
+&trans  &trans     &trans    &trans    &trans         &trans      &trans    &trans        &trans        &trans        &trans        &onepass
             >;
         };
 
