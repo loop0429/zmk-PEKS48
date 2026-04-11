@@ -51,12 +51,12 @@
         };
 
         range_screenshot {
-            bindings = <&kp LG(LS(KP_NUMBER_4))>;
+            bindings = <&kp LG(LS(NUMBER_4))>;
             key-positions = <2 14>;
         };
 
         range_record {
-            bindings = <&kp LG(LS(KP_NUMBER_4))>;
+            bindings = <&kp LG(LS(NUMBER_5))>;
             key-positions = <14 26>;
         };
     };
