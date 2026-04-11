@@ -56,7 +56,7 @@
         };
 
         range_record {
-            bindings = <&kp LG(LS(KP_NUMBER_5))>;
+            bindings = <&kp LG(LS(KP_NUMBER_4))>;
             key-positions = <14 26>;
         };
     };
