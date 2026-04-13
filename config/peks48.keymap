@@ -62,10 +62,10 @@
 
         layer_1 {
             bindings = <
-&trans  &kp EXCL   &kp AT     &kp HASH  &kp DLLR          &kp LPAR    &kp RPAR  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_0  &kp C_VOL_UP
-&trans  &kp PRCNT  &kp AMPS   &kp PIPE  &kp BACKSLASH     &kp LBRC    &kp RBRC  &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp ASTRK     &kp C_VOLUME_DOWN
-&trans  &trans     &kp GRAVE  &kp DQT   &kp SINGLE_QUOTE  &kp LBKT    &kp RBRC  &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp CARET     &kp K_MUTE
-&trans  &trans     &trans     &trans    &trans            &trans      &trans    &trans        &trans        &trans        &trans        &onepass
+&trans  &kp EXCL   &kp AT     &kp HASH  &kp DLLR          &kp LPAR    &kp RPAR           &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_0  &kp C_VOL_UP
+&trans  &kp PRCNT  &kp AMPS   &kp PIPE  &kp BACKSLASH     &kp LBRC    &kp RBRC           &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp ASTRK     &kp C_VOLUME_DOWN
+&trans  &trans     &kp GRAVE  &kp DQT   &kp SINGLE_QUOTE  &kp LBKT    &kp RIGHT_BRACKET  &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp CARET     &kp K_MUTE
+&trans  &trans     &trans     &trans    &trans            &trans      &trans             &trans        &trans        &trans        &trans        &onepass
             >;
         };
 
