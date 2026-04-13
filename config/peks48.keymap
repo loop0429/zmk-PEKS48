@@ -46,6 +46,20 @@
             bindings = <&kp LS(S) &kp Z &kp R &kp K &kp N9 &kp PRCNT &kp N2 &kp N2 &kp LS(F) &kp H &kp U &kp N1 &kp N8 &kp N3 &kp A &kp LS(S) &kp ENTER>;
             label = "ONEPASS";
         };
+
+        var_dump: var_dump {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&none &kp V &kp A &kp R &kp UNDER &kp D &kp U &kp M &kp P &kp LPAR &kp RPAR &kp LEFT_ARROW>;
+            label = "VAR_DUMP";
+        };
+
+        console: console {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&none &kp C &kp O &kp N &kp S &kp O &kp L &kp E &kp DOT &kp L &kp O &kp G &kp LPAR &kp RPAR &kp LEFT_ARROW>;
+            label = "CONSOLE";
+        };
     };
 
     keymap {
